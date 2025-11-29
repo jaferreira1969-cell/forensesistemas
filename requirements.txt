@@ -8,7 +8,7 @@ passlib[bcrypt]
 python-jose[cryptography]
 requests
 reportlab
-mangum==0.17.0
+mangum
 bcrypt
 beautifulsoup4
 pypdf
