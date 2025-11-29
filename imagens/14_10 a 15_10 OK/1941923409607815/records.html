@@ -1,0 +1,4379 @@
+<html><head><meta charset="UTF-8"/><title>WhatsApp Business Record</title><style type="text/css">body {
+      font-family: "DejaVu Sans Condensed", sans-serif;
+      margin: 0,
+    }
+
+    table {
+      table-layout: fixed;
+      max-width: 209mm;
+      word-break: break-word;
+    }
+
+    li label {
+        max-width: 80%;
+      vertical-align: top
+    }
+
+    .sticky_side_bar {
+      width: 10%;
+      overflow: hidden;
+      position: absolute;
+      display: block;
+      padding: 20px;
+
+    }
+
+    .records_output {
+      height: 100vh;
+      overflow: auto;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 20mm;
+      margin: 10mm auto;
+      border: 1px #D3D3D3 solid;
+      border-radius: 5px;
+      background: white;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    img,
+    video,
+    audio {
+      max-width: 100%;
+      max-height: 200mm;
+    }
+    /* div table */
+    .t .t {
+      margin-left: 10px;
+      max-width: 209mm;
+      word-break: keep-all;
+    }
+    /* outer layer */
+    .o {
+      font-weight: bold;
+    }
+    /* inner layer */
+    .i {
+      font-weight: bold;
+      display:table;
+    }
+    /* most inner layer */
+    .m {
+      font-weight: normal;
+      display:table-cell;
+      padding: 2px;
+      word-break: break-word;
+      word-wrap: break-word !important;
+    }
+    /* padding */
+    .p {
+      padding: 5px;
+    }
+    .h {
+      
+    }
+
+    @media print {
+      .pageBreak {
+        display: block;
+        page-break-before: always;
+        page-break-inside: avoid;
+      }
+      .pageBreak:not(.pageBreak ~ .pageBreak) { /* This avoids an inital blank page */
+        page-break-before: avoid;
+      }
+      @page {
+        size: auto;
+        margin: 1;
+       }
+    }
+
+      .pageBreak {
+      background-color: rgb(37, 211, 10);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      left: 0px;
+      position: relative;
+      
+    }</style></head><body>
+<div id="home" class="content-pane visible-content"><div class="sticky_side_bar"><div>
+<p>Categories</p>
+<ul>
+<li><a property="request_parameters" href="#property-request_parameters">Request Parameters</a></li>
+<li><a property="message_log" href="#property-message_log">Message Log</a></li>
+<li><a property="call_logs" href="#property-call_logs">Call Logs</a></li>
+</ul>
+<p>Print Options</p>
+<ul>
+<li>By Category <div class="p"></div>
+<input onchange="printOptionChange(this)" type="checkbox" id="all_print" /><label for="print_all">All</label><div class="p"></div>
+<input onchange="printOptionChange(this)" type="checkbox" id="request_parameters_print" /><label for="request_parameters">Request Parameters</label><div class="p"></div>
+<input onchange="printOptionChange(this)" type="checkbox" id="message_log_print" /><label for="message_log">Message Log</label><div class="p"></div>
+<input onchange="printOptionChange(this)" type="checkbox" id="call_logs_print" /><label for="call_logs">Call Logs</label><div class="p"></div>
+</li>
+<li>By Page: <div class="p"></div>
+<label for="CB1">Page Range</label><input oninput="printOptionChange(this)" style="width: 50px;" type="text" id="page_range_print" placeholder="1-3" /><div class="p"></div>
+<label for="CB1">Page Number</label><input oninput="printOptionChange(this)" style="width: 50px;" type="text" id="exact_match_print" placeholder="1" /><div class="p"></div>
+</li>
+<button onclick="onSubmitClick()">Print</button>
+</ul>
+</div></div></div>
+<div class="records_output" id="records">
+<div id="property-request_parameters" class="content-pane">
+</div><div id="page_1" class="pageBreak">WhatsApp Business Record Page 1</div><div class="content-pane">
+<div class="t o"><div class="t i">Service<div class="m"><div>WhatsApp<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Internal Ticket Number<div class="m"><div>2770816<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Account Identifier<div class="m"><div>+556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Account Type<div class="m"><div>WhatsAppUser<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Generated<div class="m"><div>2024-10-15 22:16:31 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Date Range<div class="m"><div>2024-10-14 22:12:24 UTC to 2024-10-15 22:12:24 UTC<div class="p"></div>
+</div></div>
+</div></div>
+</div>
+<div id="property-message_log" class="content-pane">
+<div class="p"></div>
+<div class="t o"><div class="t i">Message Log Definition<div class="m"><div>Message Log: Information about encrypted messages associated with the account.<div class="p"></div>Message: Information about the message.<div class="p"></div>Timestamp: Date and time with the message sent.<div class="p"></div>Message ID: Unique identifier associated with the message<div class="p"></div>Sender: Account holder who sent the message.<div class="p"></div>Recipients: Account holder(s) who received the message.<div class="p"></div>Sender IP: IP address associated with the sender<div class="p"></div>Sender Port: Port associated with the sender<div class="p"></div>Sender Device: The specific device used to send the message. <div class="p"></div>Type: Type of message<div class="p"></div>Message Style: Style of the message<div class="p"></div>Message Size: Number of bytes<div class="p"></div>Encrypted Message Content : The encrypted content of the message.<div class="p"></div>Target IPs and Ports: Text, audio, image, and video messages IP addresses and Port numbers for only the target account holder<div class="p"></div>
+</div></div></div></div></div><div id="page_2" class="pageBreak">WhatsApp Business Record Page 2</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class="">Sender IPs and Ports: IP addresses and port numbers for all WhatsApp users involved in sending WhatsApp text, audio, image, and video messages with the target account holder.<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message Log<div class="m"><div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 01:12:19 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>B252E6B417202688B42F454EF6F5A5D9<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556191950949<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:389:a2b8:3617:cb95:b857:1cc8:51d5<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>50542<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>240<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 01:12:22 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>BB75F33AF6FAD0C5D8E70D3FC2125FFB<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556191950949<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:389:a2b8:3617:cb95:b857:1cc8:51d5<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>50542<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>324<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_3" class="pageBreak">WhatsApp Business Record Page 3</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">2024-10-15 01:12:22 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>5D17658DB03B69745BC3760A78997DEA<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556191950949<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:389:a2b8:3617:cb95:b857:1cc8:51d5<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>50542<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>240<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 01:12:57 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A274ED6FC610EB0F858<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556191950949<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:f700:f1ad:50bf:d1c7:d3d<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>52076<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>112<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 01:15:04 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_4" class="pageBreak">WhatsApp Business Record Page 4</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">B56100E4557A62116021621064B052F6<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556191950949<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:389:a2b8:3617:cb95:b857:1cc8:51d5<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>54848<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>196<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 01:15:27 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AD1233B310FFFAA4B9C<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556191950949<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:f700:f1ad:50bf:d1c7:d3d<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>52082<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>112<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 01:41:02 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A5940470474EA66C91D<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_5" class="pageBreak">WhatsApp Business Record Page 5</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:9500:88be:87aa:c620:8f3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>51384<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 01:41:10 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AC39AA93B5895149F06<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:9500:88be:87aa:c620:8f3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>51384<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>132<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 01:43:19 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A53EEC0921260487E20<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_6" class="pageBreak">WhatsApp Business Record Page 6</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:9500:88be:87aa:c620:8f3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>51384<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>152<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 01:43:32 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3ADAD248C3D2998C3017<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:9500:88be:87aa:c620:8f3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>51384<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 05:43:56 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>81774D66DC258BDB619D9731CEE80E10<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556194218465<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_7" class="pageBreak">WhatsApp Business Record Page 7</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">200.181.95.127<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>44842<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 08:36:39 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>819B0C600BB1FA40CA8EA39C4CCC0E1A<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556194218465<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:865f:e900:b5f8:38a2:e33d:af9a<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>41250<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 11:04:50 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AD975C2F636F394D0F7<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:896:1bf2:dcd9:be0f:c74d:f221<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_8" class="pageBreak">WhatsApp Business Record Page 8</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">52314<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>voice<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>880<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:26:45 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A608F861017F33AC778<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:896:1bf2:dcd9:be0f:c74d:f221<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53015<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>248<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:30:25 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>688017D018435E8B0C34BBD1D07B5305<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:214:86bb:dae:1:0:f054:18aa<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_9" class="pageBreak">WhatsApp Business Record Page 9</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>152<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:30:27 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>FDEE576983476ECF7CCD48DEF81C4D10<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:214:86bb:dae:1:0:f054:18aa<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>152<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:30:29 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>4C3BA391FF3E161FD4B07A35509C9BFE<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:214:86bb:dae:1:0:f054:18aa<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_10" class="pageBreak">WhatsApp Business Record Page 10</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>152<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:32:17 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A044377C6108EB41937<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:896:1bf2:dcd9:be0f:c74d:f221<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53022<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>132<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:32:25 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A67408D006E759669F2<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:896:1bf2:dcd9:be0f:c74d:f221<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53022<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_11" class="pageBreak">WhatsApp Business Record Page 11</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>132<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:32:41 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A61F8321B4939854D3C<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:896:1bf2:dcd9:be0f:c74d:f221<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53022<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>196<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:32:53 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AAEAE2614B0E3A6C18F<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:896:1bf2:dcd9:be0f:c74d:f221<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53022<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_12" class="pageBreak">WhatsApp Business Record Page 12</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">152<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:32:56 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>53A713C92C924D4E7FEE4EDB25F63062<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:214:86bb:dae:1:0:f054:18aa<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>152<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:32:58 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>8B28888AADCAAB4C60761E10518ADA53<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:214:86bb:dae:1:0:f054:18aa<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>152<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_13" class="pageBreak">WhatsApp Business Record Page 13</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">2024-10-15 12:33:04 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>DB67D25BDA1CA12D6B66808F1903E719<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:214:86bb:dae:1:0:f054:18aa<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>304<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:33:06 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>7DD23B186DF47034CF0B1803B903F843<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:214:86bb:dae:1:0:f054:18aa<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>132<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:33:15 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_14" class="pageBreak">WhatsApp Business Record Page 14</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">53A78A05FC173F51AD8D3A12BC20C6A7<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556185782956<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:214:86bb:dae:1:0:f054:18aa<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 13:06:53 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3EB0E12130F93EA4E234A4<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556184389535<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:1b2:180:4bc6:24f9:39b6:c098:a482<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>54921<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>web<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>240<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 14:01:37 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A1003F84CB30A8F8ACA<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_15" class="pageBreak">WhatsApp Business Record Page 15</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556181213819<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53219<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>308<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 14:01:37 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>042735B4234C46E16F1EB95FC70AB8D5<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556181213819<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:14c:65f2:85fa:cf17:a87b:13ff:c60f<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>47788<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>smba<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>240<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 14:02:08 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>0002F2CB4441A1C87CAC75E3E7C9DA38<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556181213819<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_16" class="pageBreak">WhatsApp Business Record Page 16</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:14c:65f2:85fa:cf17:a87b:13ff:c60f<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>47788<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>smba<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>324<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 14:02:10 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3D2D3A147C028A6F64F0EEE5EC23305B<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556181213819<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:14c:65f2:85fa:cf17:a87b:13ff:c60f<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>47788<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>smba<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>324<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 14:46:59 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AB250BD029C06227C04<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556181213819<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_17" class="pageBreak">WhatsApp Business Record Page 17</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53237<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>332<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 14:47:16 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AEA853E228D027333C7<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556181213819<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53237<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>376<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 14:47:38 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A66E2ACE85C3C853850<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556181213819<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_18" class="pageBreak">WhatsApp Business Record Page 18</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">53237<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>308<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 14:48:58 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>423B13C8B535912E026C4D8B20081B57<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556181213819<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:14c:65f2:85fa:84c3:9a51:f213:aa96<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>40208<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>smba<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>voice<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>1052<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:16:34 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A8E43FFD92B3AEEF12F<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:501f:2e8d:3d44:3407:631d:9a09<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>52850<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_19" class="pageBreak">WhatsApp Business Record Page 19</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>268<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:16:44 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AA749388B620D3919DF<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:501f:2e8d:3d44:3407:631d:9a09<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>52850<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>292<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:18:40 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AC897883E7DC7919C2D<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:501f:2e8d:3d44:3407:631d:9a09<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>52850<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_20" class="pageBreak">WhatsApp Business Record Page 20</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>292<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:18:49 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AED737B49F15D1E6354<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53446<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>132<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:19:33 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A630134B9AA9220EC9B<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53446<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_21" class="pageBreak">WhatsApp Business Record Page 21</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>548<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:19:42 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A07D48E88EC956CA37C<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53446<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>432<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:29:12 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3ABC39522C762349CDF2<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>179.214.113.105<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>18454<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_22" class="pageBreak">WhatsApp Business Record Page 22</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">196<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:29:39 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A02FC5DD429194681B6<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>179.214.113.105<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>18454<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>196<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:29:43 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AA55D26783DE0EEF287<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>179.214.113.105<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>18454<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>196<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_23" class="pageBreak">WhatsApp Business Record Page 23</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">2024-10-15 15:29:47 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A7CE7DA5274D28F8A5E<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>179.214.113.105<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>18454<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:30:01 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A23BDC8958696D64E45<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53456<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>132<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:33:09 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_24" class="pageBreak">WhatsApp Business Record Page 24</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">3A4C6BF9ABCE9D98289F<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:896:1bf2:dcd9:be0f:c74d:f221<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53457<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:33:21 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A1A238D7F9ADCD62115<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556195954918<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:896:1bf2:dcd9:be0f:c74d:f221<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53457<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>196<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:42:39 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>CCA615DAD1D6AF3B523E1C86122134C4<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_25" class="pageBreak">WhatsApp Business Record Page 25</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">556195631826<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:8e:bcb0:9064:36ff:fe06:2ab5<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>49840<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>152<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:42:44 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>DE9A2307A6124018C83708B6780C0322<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195631826<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:8e:bcb0:9064:36ff:fe06:2ab5<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>49840<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:43:19 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A183EE61A74CD50DA82<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_26" class="pageBreak">WhatsApp Business Record Page 26</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">556195631826<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53609<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>112<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:47:59 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A0F8EA8EBF236331226<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53618<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>image<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>2104<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 15:51:29 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A1619FCE414108CFFEF<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_27" class="pageBreak">WhatsApp Business Record Page 27</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53622<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>voice<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>1016<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:09:57 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A16E5AEC319831A00D0<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556195251304<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53628<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>voice<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>880<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:10:25 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>14197898CA3488FACC6FC4E85487948D<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195251304<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:14c:65f0:8964:3264:38cc:6bce:8c68<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_28" class="pageBreak">WhatsApp Business Record Page 28</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">47658<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>112<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:10:39 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A4D1719F79103D2E470<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556195251304<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53628<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>112<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:10:47 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>6D425327F8D22FB3C7446BC0B7C5A127<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195251304<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:14c:65f0:8964:3264:38cc:6bce:8c68<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>47658<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_29" class="pageBreak">WhatsApp Business Record Page 29</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:10:55 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A704439A3608E958D3E<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556195251304<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53628<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>132<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:10:57 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AB6AA1079AB9CBB4B42<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556195251304<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53628<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_30" class="pageBreak">WhatsApp Business Record Page 30</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>112<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:11:11 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>59323B77F82F906298518EE7CCAD5A11<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:389:a198:9cfb:d0c9:d2c8:2a5a:6d15<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38054<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>308<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:11:16 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>7D74191F94A050F58EF28B35510193B5<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:389:a198:9cfb:d0c9:d2c8:2a5a:6d15<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38054<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_31" class="pageBreak">WhatsApp Business Record Page 31</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>328<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:11:41 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>D05C7993D880337D60403BAB8119A5DB<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195251304<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:14c:65f0:8964:3264:38cc:6bce:8c68<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>47658<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>152<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:17:10 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A49659F1FE43E0BAB43<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53634<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_32" class="pageBreak">WhatsApp Business Record Page 32</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">268<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:17:17 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A68CB1C5C6978272C92<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556195251304<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53634<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>132<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:17:48 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>6AFAA6FF783C3B6882173A31FD9F30F6<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195251304<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:14c:65f0:8964:3264:38cc:6bce:8c68<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>37936<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>112<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_33" class="pageBreak">WhatsApp Business Record Page 33</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">2024-10-15 16:19:28 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>55B4897ED786223A4B038501440B0D67<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:389:a198:9cfb:d0c9:d2c8:2a5a:6d15<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38054<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>308<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:19:31 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>77D4D7E98A297E3173632E7ABE05E955<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:389:a198:9cfb:d0c9:d2c8:2a5a:6d15<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38054<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>308<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:23:04 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_34" class="pageBreak">WhatsApp Business Record Page 34</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">3AFCDBED965119136493<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53642<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>video<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>2188<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:23:20 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A927F84BEB66EAABD0A<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53642<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>video<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>2084<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:35:48 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>C7FE97F0C5CB6652F78AC8C904668D0C<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_35" class="pageBreak">WhatsApp Business Record Page 35</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:389:a198:9cfb:d0c9:d2c8:2a5a:6d15<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38432<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>308<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:45:08 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AE96B3C0BDF28D0E8EC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556198805162<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:f700:65d3:d4cb:34cf:7cb3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>64062<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:45:08 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A7CD173167554A265B2<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556198805162<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_36" class="pageBreak">WhatsApp Business Record Page 36</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:f700:65d3:d4cb:34cf:7cb3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>64062<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:45:09 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AE15E35B6D1818DE88B<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556198805162<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:f700:65d3:d4cb:34cf:7cb3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>64062<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>196<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:45:09 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A3E1F6CCF1D4684DBC9<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556198805162<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_37" class="pageBreak">WhatsApp Business Record Page 37</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">2804:d59:8684:f700:65d3:d4cb:34cf:7cb3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>64062<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>152<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:45:09 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AC4AEFCFB1CF7FDBE54<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556198805162<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:f700:65d3:d4cb:34cf:7cb3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>64062<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 16:45:09 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A5DE439877F8A5BDA55<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556198805162<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:f700:65d3:d4cb:34cf:7cb3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_38" class="pageBreak">WhatsApp Business Record Page 38</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">64062<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>176<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 17:46:17 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AE4542AA0E86739A2CA<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556193384001<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53794<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>132<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 18:09:57 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>DAA1B1013585DC3755B4556A62352132<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:56c:21d2:cd00:28eb:d6f4:6597:eafd<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>51012<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_39" class="pageBreak">WhatsApp Business Record Page 39</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>image<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>1796<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 18:10:54 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>2BD12C4C9AED19DD1690F748384DB2F9<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:56c:21d2:cd00:28eb:d6f4:6597:eafd<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>51012<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>voice<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>900<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 18:11:02 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>0014D98794E4A19B9D1918252B15BAB4<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:56c:21d2:cd00:28eb:d6f4:6597:eafd<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>51012<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_40" class="pageBreak">WhatsApp Business Record Page 40</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">voice<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>880<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 18:18:55 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A01B377B4F1D922B7EF<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:9500:7c08:ce6:8bf4:5670<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>53734<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>voice<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>880<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 19:22:38 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>04C661749D7BF46BCA9B955611F17CCA<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556193665481<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:2904:1103:c18:88e7:d0c4:8923:f875<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>39204<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>video<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_41" class="pageBreak">WhatsApp Business Record Page 41</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>1696<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 21:02:06 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>5EFBA4E70414D8C1D7A14A6000B3D445<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:56c:21d2:cd00:28eb:d6f4:6597:eafd<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>56858<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>vcard<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>368<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 21:02:15 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>194816DA4A073F2CF8CD997FA04126B2<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:56c:21d2:cd00:28eb:d6f4:6597:eafd<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>56858<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>voice<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_42" class="pageBreak">WhatsApp Business Record Page 42</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">900<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 21:12:46 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A72604EFC4FC373A379<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:9500:31:7ee8:aeb1:e0a7<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>54258<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>voice<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>880<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 21:13:32 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A1441CC798AEE1C5E71<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:d59:8684:9500:31:7ee8:aeb1:e0a7<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>54259<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>voice<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>880<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_43" class="pageBreak">WhatsApp Business Record Page 43</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">2024-10-15 21:43:31 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>363C6A9DD0473A7CEE8E15DB20BBE101<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195631826<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>138.0.245.251<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38779<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>152<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 21:44:14 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>5C8D6648B1532DFA432E2234F60915E1<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195631826<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>138.0.245.251<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38779<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>260<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 21:44:32 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_44" class="pageBreak">WhatsApp Business Record Page 44</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">C6A4A5004378D4694104A4D7641A745D<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556195631826<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>138.0.245.251<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>38779<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>android<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>196<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 21:44:47 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3AD1B09194C2EACE12F0<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556195631826<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>2804:18:89a:dd3b:7c11:c051:51e0:c2fe<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>54681<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>112<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="p"></div>
+</div>
+<div id="property-call_logs" class="content-pane">
+<div class="p"></div>
+<div class="t o"><div class="t i">Call Logs Definition<div class="m"><div>Call Logs: Returns logs associated with WhatsApp audio and video calls that the account holder participates in<div class="p"></div>Event: may either return av_switch, group_update, offer, accept, terminate, or reject.<div class="p"></div>
+</div></div></div></div></div><div id="page_45" class="pageBreak">WhatsApp Business Record Page 45</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class="">Av_switch: indicates the WhatsApp call has switched from audio to video.<div class="p"></div>Group_update: indicates a WhatsApp caller has either joined or left a call with 2 or more callers.<div class="p"></div>Offer: indicates when a WhatsApp caller sends an offer message to another WhatsApp caller to initiate a call.<div class="p"></div>Accept: indicates the call offer was accepted by the recipient agreeing to start the call.<div class="p"></div>Terminate: indicates the call has ended.<div class="p"></div>Reject: indicates the call offer was rejected by the recipient declining to start a call.<div class="p"></div>All IPs and Ports: IP addresses and Port numbers for those WhatsApp users involved in the audio or video call (if available)<div class="p"></div>Call Creator: The WhatsApp user that initiated the audio or video call<div class="p"></div>Targets IPs and Ports: Audio and video call IP addresses and Port numbers for only the target account holder<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Call Log<div class="m"><div>
+<div class="t o"><div class="t i">Call<div class="m"><div>
+<div class="t o"><div class="t i">Call Id<div class="m"><div>4E91F6424BD0C870C7601BF66533A5D6<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call Creator<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Events<div class="m"><div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:32 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:1834:a007:44d9:7dc3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:32 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_46" class="pageBreak">WhatsApp Business Record Page 46</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:1834:a007:44d9:7dc3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:32 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:1834:a007:44d9:7dc3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:32 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:1834:a007:44d9:7dc3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>reject<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:34 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:893:d7ec:4cf4:aa59:f83e:32b0<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_47" class="pageBreak">WhatsApp Business Record Page 47</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">52004<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call<div class="m"><div>
+<div class="t o"><div class="t i">Call Id<div class="m"><div>D633A157DE9E71988B22C49554392050<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call Creator<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Events<div class="m"><div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:32 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:1834:a007:44d9:7dc3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:32 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:1834:a007:44d9:7dc3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>reject<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:34 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_48" class="pageBreak">WhatsApp Business Record Page 48</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">2804:18:893:d7ec:4cf4:aa59:f83e:32b0<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>52004<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:34 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:1834:a007:44d9:7dc3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:49 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:1834:a007:44d9:7dc3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call<div class="m"><div>
+<div class="t o"><div class="t i">Call Id<div class="m"><div>C202F9DF116BCD3DAFA53F01EBB79698<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call Creator<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Events<div class="m"><div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:53 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_49" class="pageBreak">WhatsApp Business Record Page 49</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">2804:18:893:d7ec:4cf4:aa59:f83e:32b0<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>52004<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>video<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>accept<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:15:59 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:1834:a007:44d9:7dc3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:17:36 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:1834:a007:44d9:7dc3<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48294<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 00:17:36 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:893:d7ec:4cf4:aa59:f83e:32b0<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>52004<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call<div class="m"><div>
+<div class="t o"><div class="t i">Call Id<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_50" class="pageBreak">WhatsApp Business Record Page 50</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">2F2250E46815128F17A89E268D7EA7CB<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call Creator<div class="m"><div>556194218465<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Events<div class="m"><div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 05:43:14 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556194218465<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>200.181.95.127<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>44842<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 05:43:43 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556194218465<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>200.181.95.127<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>44842<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call<div class="m"><div>
+<div class="t o"><div class="t i">Call Id<div class="m"><div>30B1B84890BA30C8E4409158C1D7CD97<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call Creator<div class="m"><div>556196129889<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Events<div class="m"><div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:13:46 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556196129889<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_51" class="pageBreak">WhatsApp Business Record Page 51</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">2804:18:89c:316:17fe:86fd:9948:f38e<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48340<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>accept<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:13:52 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556196129889<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:896:1bf2:dcd9:be0f:c74d:f221<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>52978<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 12:14:54 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556196129889<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:89c:316:17fe:86fd:9948:f38e<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>48340<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call<div class="m"><div>
+<div class="t o"><div class="t i">Call Id<div class="m"><div>BEC4D168BB1110373738F025D0E5C801<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call Creator<div class="m"><div>556196129889<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Events<div class="m"><div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 17:27:38 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556196129889<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_52" class="pageBreak">WhatsApp Business Record Page 52</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">2804:18:4862:6690:1:0:cf82:de51<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>39786<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>accept<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 17:27:43 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556196129889<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>53781<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 17:29:53 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556196129889<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>53781<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 17:29:53 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556196129889<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:4862:6690:1:0:cf82:de51<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>39786<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call<div class="m"><div>
+<div class="t o"><div class="t i">Call Id<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_53" class="pageBreak">WhatsApp Business Record Page 53</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">A9E7B20B69E827E85496C33705325F6E<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call Creator<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Events<div class="m"><div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 17:33:08 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>168.228.200.153<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>50420<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>accept<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 17:33:18 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>189.74.170.62<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>53783<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 17:33:55 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>168.228.200.153<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>50420<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call<div class="m"><div>
+<div class="t o"><div class="t i">Call Id<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_54" class="pageBreak">WhatsApp Business Record Page 54</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">55424FC7D1474039636425CC74DA6158<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call Creator<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Events<div class="m"><div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 18:39:26 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:896:1bf2:dcd9:be0f:c74d:f221<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>53829<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>accept<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 18:39:48 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:28eb:d6f4:6597:eafd<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>54760<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 18:39:58 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:896:1bf2:dcd9:be0f:c74d:f221<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>53829<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_55" class="pageBreak">WhatsApp Business Record Page 55</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 18:39:58 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556195264759<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:56c:21d2:cd00:28eb:d6f4:6597:eafd<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>54760<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call<div class="m"><div>
+<div class="t o"><div class="t i">Call Id<div class="m"><div>C6A5C8C4D45A2893B9742641A407237A<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call Creator<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Events<div class="m"><div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 20:57:37 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:897:b89d:f0fe:9ae9:bda8:aaf6<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>54254<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>accept<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 20:57:45 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:d59:8675:df00:653a:22ac:1721:6e54<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>54479<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_56" class="pageBreak">WhatsApp Business Record Page 56</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 20:58:15 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:897:b89d:f0fe:9ae9:bda8:aaf6<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>54254<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 20:58:15 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:d59:8675:df00:653a:22ac:1721:6e54<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>54479<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call<div class="m"><div>
+<div class="t o"><div class="t i">Call Id<div class="m"><div>D2CE12F55CF4DB5942F4FB5F42511358<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Call Creator<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Events<div class="m"><div>
+<div class="t o"><div class="t i">Type<div class="m"><div>offer<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 21:02:56 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:897:b89d:f0fe:9ae9:bda8:aaf6<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>54255<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Media Type<div class="m"><div>audio<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="page_57" class="pageBreak">WhatsApp Business Record Page 57</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class=""><div class="t o"><div class="t i"><div class="m"><div class="">accept<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 21:03:11 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:89a:dd3b:7c11:c051:51e0:c2fe<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>54517<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>terminate<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-15 21:03:35 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From<div class="m"><div>556183604984<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">To<div class="m"><div>556194269514<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Ip<div class="m"><div>2804:18:89a:dd3b:7c11:c051:51e0:c2fe<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">From Port<div class="m"><div>54517<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="p"></div>
+</div>
+</div>
+<script type="text/javascript">
+const homeContent = document.getElementById('home');
+const contentPanes = document.getElementsByClassName('content-pane');
+const additionalPropertyLinks = document.getElementsByClassName('additional-property-link');
+for (let additionalPropertyLink of additionalPropertyLinks) {
+    let propertyName = additionalPropertyLink.getAttribute('property');
+    additionalPropertyLink.onclick = function(event) {
+      event.preventDefault();
+      window.location.hash = propertyName;
+    };
+}
+
+function onSubmitClick() {
+  const all = document.getElementById('all_print').checked;
+
+  if (all) {
+      printByID('records');
+  }
+  const exact_match = document.getElementById('exact_match_print').value;
+  if (exact_match != '') {
+    printByPageRange(exact_match, exact_match)
+  }
+
+
+  const page_range_print = document.getElementById('page_range_print').value;
+  if (page_range_print != '') {
+    const parse = page_range_print.split('-');
+    const start = parse[0];
+    const end = parse[1];
+    printByPageRange(start, end);
+  }
+
+  // other print options will go here
+  const request_parameters_print = document.getElementById("request_parameters_print").checked;const message_log_print = document.getElementById("message_log_print").checked;const call_logs_print = document.getElementById("call_logs_print").checked;
+
+  if(request_parameters_print){printByID("property-request_parameters");}if(message_log_print){printByID("property-message_log");}if(call_logs_print){printByID("property-call_logs");}
+  return;
+}
+
+function printByID(id) {
+  let toWrite = '';
+  if (id === 'records') {
+    // this is the print all option
+    toWrite = document.getElementById(id).innerHTML;
+  } else {
+    let element = document.getElementById(id);
+    toWrite = element.outerHTML;
+    // grab all subdivs (aka siblings) that are part of this property
+    while (true) {
+      const next = element.nextSibling;
+      if (next === null) {
+        break;
+      }
+      if (next.id === undefined || (next.id !== undefined && !next.id.includes('property'))) {
+        element = next;
+        if(element.outerHTML !== undefined) {
+          toWrite += element.outerHTML;
+        }
+      } else {
+        break;
+      }
+    }
+    // grab the closest page header
+    if (!toWrite.includes('pageBreak')) {
+      element = document.getElementById(id);
+      while(true) {
+        element = element.previousSibling;
+        if(element.id !== undefined && element.id.includes('page_')) {
+          toWrite = element.outerHTML + toWrite;
+          break;
+        }
+      }
+    }
+  }
+  const mywindow = window.open('', 'PRINT', 'height=1000,width=1000');
+  mywindow.document.write('<html><head><title>' + document.title + '</title>');
+  mywindow.document.write('<style>body {      font-family: "DejaVu Sans Condensed", sans-serif;      margin: 0,    }    table {      table-layout: fixed;      max-width: 209mm;      word-break: break-word;    }    li label {        max-width: 80%;      vertical-align: top    }    .sticky_side_bar {      width: 10%;      overflow: hidden;      position: absolute;      display: block;      padding: 20px;    }    .records_output {      height: 100vh;      overflow: auto;      width: 210mm;      min-height: 297mm;      padding: 20mm;      margin: 10mm auto;      border: 1px #D3D3D3 solid;      border-radius: 5px;      background: white;      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);    }    img,    video,    audio {      max-width: 100%;      max-height: 200mm;    }    /* div table */    .t .t {      margin-left: 10px;      max-width: 209mm;      word-break: keep-all;    }    /* outer layer */    .o {      font-weight: bold;    }    /* inner layer */    .i {      font-weight: bold;      display:table;    }    /* most inner layer */    .m {      font-weight: normal;      display:table-cell;      padding: 2px;      word-break: break-word;      word-wrap: break-word !important;    }    /* padding */    .p {      padding: 5px;    }    .h {          }    @media print {      .pageBreak {        display: block;        page-break-before: always;        page-break-inside: avoid;      }      .pageBreak:not(.pageBreak ~ .pageBreak) { /* This avoids an inital blank page */        page-break-before: avoid;      }      @page {        size: auto;        margin: 1;       }    }      .pageBreak {      background-color: rgb(37, 211, 10);      color: white;      padding: 20px;      text-align: center;      left: 0px;      position: relative;          }</style></head><body>');
+  mywindow.document.write(toWrite);
+  mywindow.document.write('</body></html>');
+
+  // we need to sleep for a second to let the media load.
+  sleep(1000).then(() => {
+      mywindow.document.close(); // necessary for IE >= 10
+      mywindow.focus(); // necessary for IE >= 10*/
+      mywindow.print();
+  });
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function printByPageRange(start, end) {
+  let endint = 0;
+  endInt = parseInt(end) + 1;
+  let element = document.getElementById('page_' + start);
+  const endStr = 'page_' + endInt;
+  let toWrite = element.outerHTML;
+  while (true) {
+    const next = element.nextSibling;
+    if (next === null) {
+      break;
+    }
+    if (next.id === undefined || (next.id !== undefined && next.id !== endStr)) {
+      element = next;
+      toWrite += element.outerHTML;
+    } else {
+      break;
+    }
+  }
+  toWrite = toWrite.replaceAll('undefined', '');
+  const mywindow = window.open('', 'PRINT', 'height=1000,width=1000');
+  mywindow.document.write('<html><head><title>' + document.title + '</title>');
+  mywindow.document.write('<style> body {      font-family: "DejaVu Sans Condensed", sans-serif;      margin: 0,    }    table {      table-layout: fixed;      max-width: 209mm;      word-break: break-word;    }    li label {        max-width: 80%;      vertical-align: top    }    .sticky_side_bar {      width: 10%;      overflow: hidden;      position: absolute;      display: block;      padding: 20px;    }    .records_output {      height: 100vh;      overflow: auto;      width: 210mm;      min-height: 297mm;      padding: 20mm;      margin: 10mm auto;      border: 1px #D3D3D3 solid;      border-radius: 5px;      background: white;      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);    }    img,    video,    audio {      max-width: 100%;      max-height: 200mm;    }    /* div table */    .t .t {      margin-left: 10px;      max-width: 209mm;      word-break: keep-all;    }    /* outer layer */    .o {      font-weight: bold;    }    /* inner layer */    .i {      font-weight: bold;      display:table;    }    /* most inner layer */    .m {      font-weight: normal;      display:table-cell;      padding: 2px;      word-break: break-word;      word-wrap: break-word !important;    }    /* padding */    .p {      padding: 5px;    }    .h {          }    @media print {      .pageBreak {        display: block;        page-break-before: always;        page-break-inside: avoid;      }      .pageBreak:not(.pageBreak ~ .pageBreak) { /* This avoids an inital blank page */        page-break-before: avoid;      }      @page {        size: auto;        margin: 1;       }    }      .pageBreak {      background-color: rgb(37, 211, 10);      color: white;      padding: 20px;      text-align: center;      left: 0px;      position: relative;          } </style></head><body>');
+  mywindow.document.write(toWrite);
+  mywindow.document.write('</body></html>');
+
+  // we need to sleep for a second to let the media load.
+  sleep(1000).then(() => {
+    mywindow.document.close(); // necessary for IE >= 10
+    mywindow.focus(); // necessary for IE >= 10*/
+    mywindow.print();
+  });
+}
+
+function printOptionChange(input){
+  const allInputs = document.getElementsByTagName('input');
+  const inputClicked = document.getElementById(input.id);
+  if (inputClicked.checked || (inputClicked.type === 'text' && inputClicked.value !== '')) {
+    for(let i=0; i < allInputs.length; i++){
+      if(allInputs[i] !== inputClicked){
+        allInputs[i].disabled = true;
+      }
+    }
+  } else {
+    for(let i=0; i < allInputs.length; i++){
+      allInputs[i].disabled = false;
+    }
+  }
+}
+
+
+</script></body></html>

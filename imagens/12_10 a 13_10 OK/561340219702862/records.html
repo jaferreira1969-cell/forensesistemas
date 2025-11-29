@@ -1,0 +1,384 @@
+<html><head><meta charset="UTF-8"/><title>WhatsApp Business Record</title><style type="text/css">body {
+      font-family: "DejaVu Sans Condensed", sans-serif;
+      margin: 0,
+    }
+
+    table {
+      table-layout: fixed;
+      max-width: 209mm;
+      word-break: break-word;
+    }
+
+    li label {
+        max-width: 80%;
+      vertical-align: top
+    }
+
+    .sticky_side_bar {
+      width: 10%;
+      overflow: hidden;
+      position: absolute;
+      display: block;
+      padding: 20px;
+
+    }
+
+    .records_output {
+      height: 100vh;
+      overflow: auto;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 20mm;
+      margin: 10mm auto;
+      border: 1px #D3D3D3 solid;
+      border-radius: 5px;
+      background: white;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    img,
+    video,
+    audio {
+      max-width: 100%;
+      max-height: 200mm;
+    }
+    /* div table */
+    .t .t {
+      margin-left: 10px;
+      max-width: 209mm;
+      word-break: keep-all;
+    }
+    /* outer layer */
+    .o {
+      font-weight: bold;
+    }
+    /* inner layer */
+    .i {
+      font-weight: bold;
+      display:table;
+    }
+    /* most inner layer */
+    .m {
+      font-weight: normal;
+      display:table-cell;
+      padding: 2px;
+      word-break: break-word;
+      word-wrap: break-word !important;
+    }
+    /* padding */
+    .p {
+      padding: 5px;
+    }
+    .h {
+      
+    }
+
+    @media print {
+      .pageBreak {
+        display: block;
+        page-break-before: always;
+        page-break-inside: avoid;
+      }
+      .pageBreak:not(.pageBreak ~ .pageBreak) { /* This avoids an inital blank page */
+        page-break-before: avoid;
+      }
+      @page {
+        size: auto;
+        margin: 1;
+       }
+    }
+
+      .pageBreak {
+      background-color: rgb(37, 211, 10);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      left: 0px;
+      position: relative;
+      
+    }</style></head><body>
+<div id="home" class="content-pane visible-content"><div class="sticky_side_bar"><div>
+<p>Categories</p>
+<ul>
+<li><a property="request_parameters" href="#property-request_parameters">Request Parameters</a></li>
+<li><a property="message_log" href="#property-message_log">Message Log</a></li>
+<li><a property="call_logs" href="#property-call_logs">Call Logs</a></li>
+</ul>
+<p>Print Options</p>
+<ul>
+<li>By Category <div class="p"></div>
+<input onchange="printOptionChange(this)" type="checkbox" id="all_print" /><label for="print_all">All</label><div class="p"></div>
+<input onchange="printOptionChange(this)" type="checkbox" id="request_parameters_print" /><label for="request_parameters">Request Parameters</label><div class="p"></div>
+<input onchange="printOptionChange(this)" type="checkbox" id="message_log_print" /><label for="message_log">Message Log</label><div class="p"></div>
+<input onchange="printOptionChange(this)" type="checkbox" id="call_logs_print" /><label for="call_logs">Call Logs</label><div class="p"></div>
+</li>
+<li>By Page: <div class="p"></div>
+<label for="CB1">Page Range</label><input oninput="printOptionChange(this)" style="width: 50px;" type="text" id="page_range_print" placeholder="1-3" /><div class="p"></div>
+<label for="CB1">Page Number</label><input oninput="printOptionChange(this)" style="width: 50px;" type="text" id="exact_match_print" placeholder="1" /><div class="p"></div>
+</li>
+<button onclick="onSubmitClick()">Print</button>
+</ul>
+</div></div></div>
+<div class="records_output" id="records">
+<div id="property-request_parameters" class="content-pane">
+</div><div id="page_1" class="pageBreak">WhatsApp Business Record Page 1</div><div class="content-pane">
+<div class="t o"><div class="t i">Service<div class="m"><div>WhatsApp<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Internal Ticket Number<div class="m"><div>2770816<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Account Identifier<div class="m"><div>+556592527203<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Account Type<div class="m"><div>WhatsAppUser<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Generated<div class="m"><div>2024-10-13 22:19:36 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Date Range<div class="m"><div>2024-10-12 22:12:24 UTC to 2024-10-13 22:12:24 UTC<div class="p"></div>
+</div></div>
+</div></div>
+</div>
+<div id="property-message_log" class="content-pane">
+<div class="p"></div>
+<div class="t o"><div class="t i">Message Log Definition<div class="m"><div>Message Log: Information about encrypted messages associated with the account.<div class="p"></div>Message: Information about the message.<div class="p"></div>Timestamp: Date and time with the message sent.<div class="p"></div>Message ID: Unique identifier associated with the message<div class="p"></div>Sender: Account holder who sent the message.<div class="p"></div>Recipients: Account holder(s) who received the message.<div class="p"></div>Sender IP: IP address associated with the sender<div class="p"></div>Sender Port: Port associated with the sender<div class="p"></div>Sender Device: The specific device used to send the message. <div class="p"></div>Type: Type of message<div class="p"></div>Message Style: Style of the message<div class="p"></div>Message Size: Number of bytes<div class="p"></div>Encrypted Message Content : The encrypted content of the message.<div class="p"></div>Target IPs and Ports: Text, audio, image, and video messages IP addresses and Port numbers for only the target account holder<div class="p"></div>
+</div></div></div></div></div><div id="page_2" class="pageBreak">WhatsApp Business Record Page 2</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class="">Sender IPs and Ports: IP addresses and port numbers for all WhatsApp users involved in sending WhatsApp text, audio, image, and video messages with the target account holder.<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message Log<div class="m"><div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-13 19:20:28 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3ADE70AB4466F5BDA316<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>5517996455388<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556592527203<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>45.174.38.4<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>9924<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>112<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Message<div class="m"><div>
+<div class="t o"><div class="t i">Timestamp<div class="m"><div>2024-10-13 19:20:33 UTC<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Id<div class="m"><div>3A37493ABAF4BA9924E5<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender<div class="m"><div>5517996455388<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Recipients<div class="m"><div>556592527203<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Ip<div class="m"><div>45.174.38.4<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Port<div class="m"><div>9924<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Sender Device<div class="m"><div>iphone<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Type<div class="m"><div>text<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Style<div class="m"><div>individual<div class="p"></div>
+</div></div>
+</div></div>
+<div class="t o"><div class="t i">Message Size<div class="m"><div>132<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="p"></div>
+</div>
+<div id="property-call_logs" class="content-pane">
+<div class="p"></div>
+<div class="t o"><div class="t i">Call Logs Definition<div class="m"><div>
+</div></div></div></div></div><div id="page_3" class="pageBreak">WhatsApp Business Record Page 3</div><div class="content-pane"><div class="t o"><div class="t i"><div class="m"><div class="">Call Logs: Returns logs associated with WhatsApp audio and video calls that the account holder participates in<div class="p"></div>Event: may either return av_switch, group_update, offer, accept, terminate, or reject.<div class="p"></div>Av_switch: indicates the WhatsApp call has switched from audio to video.<div class="p"></div>Group_update: indicates a WhatsApp caller has either joined or left a call with 2 or more callers.<div class="p"></div>Offer: indicates when a WhatsApp caller sends an offer message to another WhatsApp caller to initiate a call.<div class="p"></div>Accept: indicates the call offer was accepted by the recipient agreeing to start the call.<div class="p"></div>Terminate: indicates the call has ended.<div class="p"></div>Reject: indicates the call offer was rejected by the recipient declining to start a call.<div class="p"></div>All IPs and Ports: IP addresses and Port numbers for those WhatsApp users involved in the audio or video call (if available)<div class="p"></div>Call Creator: The WhatsApp user that initiated the audio or video call<div class="p"></div>Targets IPs and Ports: Audio and video call IP addresses and Port numbers for only the target account holder<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="t o"><div class="t i">Call Logs<div class="m"><div>No responsive records located<div class="p"></div>
+<div class="p"></div>
+</div></div>
+</div></div>
+<div class="p"></div>
+<div class="p"></div>
+</div>
+</div>
+<script type="text/javascript">
+const homeContent = document.getElementById('home');
+const contentPanes = document.getElementsByClassName('content-pane');
+const additionalPropertyLinks = document.getElementsByClassName('additional-property-link');
+for (let additionalPropertyLink of additionalPropertyLinks) {
+    let propertyName = additionalPropertyLink.getAttribute('property');
+    additionalPropertyLink.onclick = function(event) {
+      event.preventDefault();
+      window.location.hash = propertyName;
+    };
+}
+
+function onSubmitClick() {
+  const all = document.getElementById('all_print').checked;
+
+  if (all) {
+      printByID('records');
+  }
+  const exact_match = document.getElementById('exact_match_print').value;
+  if (exact_match != '') {
+    printByPageRange(exact_match, exact_match)
+  }
+
+
+  const page_range_print = document.getElementById('page_range_print').value;
+  if (page_range_print != '') {
+    const parse = page_range_print.split('-');
+    const start = parse[0];
+    const end = parse[1];
+    printByPageRange(start, end);
+  }
+
+  // other print options will go here
+  const request_parameters_print = document.getElementById("request_parameters_print").checked;const message_log_print = document.getElementById("message_log_print").checked;const call_logs_print = document.getElementById("call_logs_print").checked;
+
+  if(request_parameters_print){printByID("property-request_parameters");}if(message_log_print){printByID("property-message_log");}if(call_logs_print){printByID("property-call_logs");}
+  return;
+}
+
+function printByID(id) {
+  let toWrite = '';
+  if (id === 'records') {
+    // this is the print all option
+    toWrite = document.getElementById(id).innerHTML;
+  } else {
+    let element = document.getElementById(id);
+    toWrite = element.outerHTML;
+    // grab all subdivs (aka siblings) that are part of this property
+    while (true) {
+      const next = element.nextSibling;
+      if (next === null) {
+        break;
+      }
+      if (next.id === undefined || (next.id !== undefined && !next.id.includes('property'))) {
+        element = next;
+        if(element.outerHTML !== undefined) {
+          toWrite += element.outerHTML;
+        }
+      } else {
+        break;
+      }
+    }
+    // grab the closest page header
+    if (!toWrite.includes('pageBreak')) {
+      element = document.getElementById(id);
+      while(true) {
+        element = element.previousSibling;
+        if(element.id !== undefined && element.id.includes('page_')) {
+          toWrite = element.outerHTML + toWrite;
+          break;
+        }
+      }
+    }
+  }
+  const mywindow = window.open('', 'PRINT', 'height=1000,width=1000');
+  mywindow.document.write('<html><head><title>' + document.title + '</title>');
+  mywindow.document.write('<style>body {      font-family: "DejaVu Sans Condensed", sans-serif;      margin: 0,    }    table {      table-layout: fixed;      max-width: 209mm;      word-break: break-word;    }    li label {        max-width: 80%;      vertical-align: top    }    .sticky_side_bar {      width: 10%;      overflow: hidden;      position: absolute;      display: block;      padding: 20px;    }    .records_output {      height: 100vh;      overflow: auto;      width: 210mm;      min-height: 297mm;      padding: 20mm;      margin: 10mm auto;      border: 1px #D3D3D3 solid;      border-radius: 5px;      background: white;      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);    }    img,    video,    audio {      max-width: 100%;      max-height: 200mm;    }    /* div table */    .t .t {      margin-left: 10px;      max-width: 209mm;      word-break: keep-all;    }    /* outer layer */    .o {      font-weight: bold;    }    /* inner layer */    .i {      font-weight: bold;      display:table;    }    /* most inner layer */    .m {      font-weight: normal;      display:table-cell;      padding: 2px;      word-break: break-word;      word-wrap: break-word !important;    }    /* padding */    .p {      padding: 5px;    }    .h {          }    @media print {      .pageBreak {        display: block;        page-break-before: always;        page-break-inside: avoid;      }      .pageBreak:not(.pageBreak ~ .pageBreak) { /* This avoids an inital blank page */        page-break-before: avoid;      }      @page {        size: auto;        margin: 1;       }    }      .pageBreak {      background-color: rgb(37, 211, 10);      color: white;      padding: 20px;      text-align: center;      left: 0px;      position: relative;          }</style></head><body>');
+  mywindow.document.write(toWrite);
+  mywindow.document.write('</body></html>');
+
+  // we need to sleep for a second to let the media load.
+  sleep(1000).then(() => {
+      mywindow.document.close(); // necessary for IE >= 10
+      mywindow.focus(); // necessary for IE >= 10*/
+      mywindow.print();
+  });
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function printByPageRange(start, end) {
+  let endint = 0;
+  endInt = parseInt(end) + 1;
+  let element = document.getElementById('page_' + start);
+  const endStr = 'page_' + endInt;
+  let toWrite = element.outerHTML;
+  while (true) {
+    const next = element.nextSibling;
+    if (next === null) {
+      break;
+    }
+    if (next.id === undefined || (next.id !== undefined && next.id !== endStr)) {
+      element = next;
+      toWrite += element.outerHTML;
+    } else {
+      break;
+    }
+  }
+  toWrite = toWrite.replaceAll('undefined', '');
+  const mywindow = window.open('', 'PRINT', 'height=1000,width=1000');
+  mywindow.document.write('<html><head><title>' + document.title + '</title>');
+  mywindow.document.write('<style> body {      font-family: "DejaVu Sans Condensed", sans-serif;      margin: 0,    }    table {      table-layout: fixed;      max-width: 209mm;      word-break: break-word;    }    li label {        max-width: 80%;      vertical-align: top    }    .sticky_side_bar {      width: 10%;      overflow: hidden;      position: absolute;      display: block;      padding: 20px;    }    .records_output {      height: 100vh;      overflow: auto;      width: 210mm;      min-height: 297mm;      padding: 20mm;      margin: 10mm auto;      border: 1px #D3D3D3 solid;      border-radius: 5px;      background: white;      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);    }    img,    video,    audio {      max-width: 100%;      max-height: 200mm;    }    /* div table */    .t .t {      margin-left: 10px;      max-width: 209mm;      word-break: keep-all;    }    /* outer layer */    .o {      font-weight: bold;    }    /* inner layer */    .i {      font-weight: bold;      display:table;    }    /* most inner layer */    .m {      font-weight: normal;      display:table-cell;      padding: 2px;      word-break: break-word;      word-wrap: break-word !important;    }    /* padding */    .p {      padding: 5px;    }    .h {          }    @media print {      .pageBreak {        display: block;        page-break-before: always;        page-break-inside: avoid;      }      .pageBreak:not(.pageBreak ~ .pageBreak) { /* This avoids an inital blank page */        page-break-before: avoid;      }      @page {        size: auto;        margin: 1;       }    }      .pageBreak {      background-color: rgb(37, 211, 10);      color: white;      padding: 20px;      text-align: center;      left: 0px;      position: relative;          } </style></head><body>');
+  mywindow.document.write(toWrite);
+  mywindow.document.write('</body></html>');
+
+  // we need to sleep for a second to let the media load.
+  sleep(1000).then(() => {
+    mywindow.document.close(); // necessary for IE >= 10
+    mywindow.focus(); // necessary for IE >= 10*/
+    mywindow.print();
+  });
+}
+
+function printOptionChange(input){
+  const allInputs = document.getElementsByTagName('input');
+  const inputClicked = document.getElementById(input.id);
+  if (inputClicked.checked || (inputClicked.type === 'text' && inputClicked.value !== '')) {
+    for(let i=0; i < allInputs.length; i++){
+      if(allInputs[i] !== inputClicked){
+        allInputs[i].disabled = true;
+      }
+    }
+  } else {
+    for(let i=0; i < allInputs.length; i++){
+      allInputs[i].disabled = false;
+    }
+  }
+}
+
+
+</script></body></html>

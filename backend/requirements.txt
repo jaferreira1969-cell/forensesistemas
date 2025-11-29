@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+python-multipart
+beautifulsoup4
+requests
+pandas
+openpyxl
+reportlab
+pyinstaller
+pypdf
+psycopg2-binary
