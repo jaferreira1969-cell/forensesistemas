@@ -10,3 +10,4 @@ requests
 reportlab
 mangum
 bcrypt
+beautifulsoup4
