@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 from datetime import datetime
-import pandas as pd
 from io import BytesIO
 from sqlalchemy.orm import Session
 import models

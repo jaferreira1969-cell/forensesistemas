@@ -11,4 +11,3 @@ reportlab
 mangum
 bcrypt
 beautifulsoup4
-pandas
