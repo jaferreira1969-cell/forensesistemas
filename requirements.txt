@@ -11,3 +11,4 @@ reportlab
 mangum
 bcrypt
 beautifulsoup4
+pypdf
