@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from io import BytesIO
 from sqlalchemy.orm import Session
-import models
+import backend.models as models
 import pypdf
 import re
 

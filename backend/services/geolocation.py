@@ -1,7 +1,7 @@
 import requests
 import time
 from sqlalchemy.orm import Session
-import models
+import backend.models as models
 
 def geolocate_ips(operacao_id: int, db: Session):
     # Buscar IPs da operação que ainda não têm geolocalização
