@@ -1,15 +1,35 @@
+from fastapi import FastAPI
 from mangum import Mangum
-import sys
-import os
+from backend.routers import auth, operations, upload, graph, dashboard, geolocation, messages, telefones, ips, intelligence, dashboard_extended
 
-# Adicionar o diretório backend ao path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
+app = FastAPI(title="Forense API", root_path="/api")
 
-# Importar o app FastAPI existente
-from main import app
+# CORS
+from fastapi.middleware.cors import CORSMiddleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-# Configurar root_path para Vercel
-app.root_path = "/api"
+# Routers
+app.include_router(auth.router, prefix="/auth", tags=["auth"])
+app.include_router(operations.router, prefix="/operations", tags=["operations"])
+app.include_router(upload.router, prefix="/upload", tags=["upload"])
+app.include_router(graph.router, prefix="/graph", tags=["graph"])
+app.include_router(dashboard.router, prefix="/dashboard", tags=["dashboard"])
+app.include_router(geolocation.router, prefix="/geolocation", tags=["geolocation"])
+app.include_router(messages.router, prefix="/messages", tags=["messages"])
+app.include_router(telefones.router, prefix="/telefones", tags=["telefones"])
+app.include_router(ips.router, prefix="/ips", tags=["ips"])
+app.include_router(intelligence.router, prefix="/intelligence", tags=["intelligence"])
+app.include_router(dashboard_extended.router, prefix="/dashboard-extended", tags=["dashboard-extended"])
 
-# Criar handler para Vercel com lifespan desabilitado
+@app.get("/")
+def read_root():
+    return {"message":"Forense API Running"}
+
+# Mangum handler for Vercel
 handler = Mangum(app, lifespan="off")

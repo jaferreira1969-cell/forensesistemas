@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from typing import List, Optional
 from datetime import datetime
 
@@ -13,8 +13,7 @@ class Operacao(OperacaoBase):
     id: int
     data_criacao: datetime
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 class TelefoneBase(BaseModel):
     numero: str
@@ -31,8 +30,7 @@ class Telefone(TelefoneBase):
     categoria: Optional[str] = None
     observacoes: Optional[str] = None
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 class TelefoneUpdate(BaseModel):
     identificacao: Optional[str] = None
@@ -51,8 +49,7 @@ class IPBase(BaseModel):
 class IP(IPBase):
     id: int
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 class MensagemBase(BaseModel):
     alvo: Optional[str] = None
@@ -68,5 +65,4 @@ class Mensagem(MensagemBase):
     ip_id: Optional[int] = None
     ip_rel: Optional[IP] = None
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
