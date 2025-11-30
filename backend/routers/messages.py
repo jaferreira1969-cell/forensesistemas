@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import or_
 from typing import List, Optional
-import backend.models as models, schemas
+import backend.models as models, backend.schemas as schemas
 from backend.database import get_db
 
 router = APIRouter(

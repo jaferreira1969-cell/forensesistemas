@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, UploadFile, File, HTTPException, Form, BackgroundTasks
 from sqlalchemy.orm import Session
 from typing import List
-import backend.models as models, schemas
+import backend.models as models, backend.schemas as schemas
 from backend.database import get_db
 from services import parser, geolocation
 
