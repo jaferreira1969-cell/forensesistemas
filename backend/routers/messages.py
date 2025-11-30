@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import or_
 from typing import List, Optional
-import models, schemas
-from database import get_db
+import backend.models as models, schemas
+from backend.database import get_db
 
 router = APIRouter(
     prefix="/mensagens",

@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, UploadFile, File, HTTPException, Form, BackgroundTasks
 from sqlalchemy.orm import Session
 from typing import List
-import models, schemas
-from database import get_db
+import backend.models as models, schemas
+from backend.database import get_db
 from services import parser, geolocation
 
 router = APIRouter(

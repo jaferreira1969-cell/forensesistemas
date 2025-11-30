@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends, BackgroundTasks
 from sqlalchemy.orm import Session
 from sqlalchemy import func, String
 from typing import List
-import models
-from database import get_db
+import backend.models as models
+from backend.database import get_db
 from services import geolocation
 
 router = APIRouter(

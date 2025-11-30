@@ -8,8 +8,8 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from io import BytesIO
 from datetime import datetime
-import models
-from database import get_db
+import backend.models as models
+from backend.database import get_db
 
 router = APIRouter(
     prefix="/export",

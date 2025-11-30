@@ -4,8 +4,8 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 from datetime import datetime
 from collections import Counter, defaultdict
-import models
-from database import get_db
+import backend.models as models
+from backend.database import get_db
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak

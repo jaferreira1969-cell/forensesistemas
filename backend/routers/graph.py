@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from typing import List, Dict, Any
-import models
-from database import get_db
+import backend.models as models
+from backend.database import get_db
 
 router = APIRouter(
     prefix="/graph",

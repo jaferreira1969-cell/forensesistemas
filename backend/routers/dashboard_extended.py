@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from sqlalchemy import func, extract, desc
 from typing import Dict, Any, List
-import models
-from database import get_db
+import backend.models as models
+from backend.database import get_db
 
 router = APIRouter(
     prefix="/dashboard",
