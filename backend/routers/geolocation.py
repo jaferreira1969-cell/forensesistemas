@@ -4,7 +4,7 @@ from sqlalchemy import func, String
 from typing import List
 import backend.models as models
 from backend.database import get_db
-from services import geolocation
+from backend.services import geolocation
 
 router = APIRouter(
     prefix="/geolocation",
